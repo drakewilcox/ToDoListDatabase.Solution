@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-MySql.Data.MySqlClient; 
+using MySql.Data.MySqlClient; 
 
 namespace ToDoList.Models
 {
@@ -11,6 +11,11 @@ namespace ToDoList.Models
     public Item(string description)
     {
       Description = description;
+    }
+    public Item (string description, int id)
+    {
+      Description = description;
+      Id = id;
     }
 
     public static List<Item> GetAll()
