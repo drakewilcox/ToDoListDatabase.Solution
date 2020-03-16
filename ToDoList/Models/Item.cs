@@ -43,7 +43,8 @@ namespace ToDoList.Models
 
     public static void ClearAll()
     {
-  
+      MySqlConnection conn = DB.Connection();
+      conn.Open(); 
     }
 
     public static Item Find(int searchId)
